@@ -1,0 +1,39 @@
+.experience-title,
+.job-title {
+    color: var(--colorprimary);
+}
+.experience-desc,
+.job-desc {
+    color: var(--colorgreyletter);
+}
+.gitdiv a {
+    border: 1px solid rgb(48, 183, 176);
+    background-color: rgb(48, 183, 176);
+    padding: 5px 40px;
+
+}
+.github {
+    text-decoration: none;
+    color: white;
+    border-radius: 38px;
+}
+.github:hover {
+    background-color: black;
+    color: red;
+    font-size: 20px;
+}
+
+.job-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 60px;
+
+}
+.job-img {
+    border: 1px solid black;
+    border-radius: 30px;
+}

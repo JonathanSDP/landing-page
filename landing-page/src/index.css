@@ -1,0 +1,26 @@
+:root {
+  --fontprimary: "Kode Mono", monospace;
+  --colorprimary: #8122B4;
+  --colorgreylight: #E0E0E0;
+  --colorgreydark: #F1F1F1;
+  --colorgreyletter: #C1C1C1;
+  --colorgit: #2AEAE8;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container-profile,
+.footer-container {
+  background-color: var(--colorgreydark);
+}

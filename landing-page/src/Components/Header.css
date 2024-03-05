@@ -1,0 +1,22 @@
+.wrap-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px; 
+}
+.link-title {
+    text-decoration: none;
+    font-family: var(--fontprimary);
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--colorprimary);
+}
+.wrap-header button {
+    border-radius: 40%;
+    width: 60px;
+    height: 30px;
+    background-color: white;
+    color: var(--colorprimary);
+    border: 1px solid var(--colorgreylight);
+    cursor: pointer;
+
+}
