@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Profile from './Components/Profile';
 import Experience from './Components/Experience';
 import Footer from './Components/Footer';
+import Form from './Components/Form';
 
 function App() {
   return (
@@ -11,6 +12,11 @@ function App() {
       <Profile/>
       <Experience/>
       <Footer/>
+      <Form/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 }

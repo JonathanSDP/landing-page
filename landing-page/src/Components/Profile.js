@@ -9,8 +9,10 @@ const Profile = () => {
                 Jonathan Pojomovsky,<br/>
                 Developer Fullstack.
             </h1>
-            <p className='profile-desc'>Soy un desarrollador trainee y Tengo experiencia en HTML,<br/>
-            CSS, JAVASCRIPT,REACT,PHP,SQL,PLSQL,DATASTAGE,C++ y UNREALENGINE</p>
+            <p className='profile-desc'>Soy un desarrollador trainee
+             y Tengo experiencia en HTML,CSS,JAVASCRIPT,<br/>
+            REACT,PHP,SQL,PLSQL,<br/>
+            DATASTAGE,C++ y UNREALENGINE</p>
             <img src={require("../Assets/main-photo.jpg")}></img>
         </section>
         <section className='skills-container'>
