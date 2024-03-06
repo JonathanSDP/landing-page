@@ -1,14 +1,63 @@
 import React, {useState} from 'react'
+import {useForm} from "../Hooks/useForm.js"
+import Loader from './Loader.js';
+import Message from './Message.js';
+
+
+const initialForm = {
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+}
+
+const validationForm = (form) => {
+    let errors= {};
+    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+    let regexMessage = /^.{1,255}$/;
+
+    if(!form.name.trim()){
+        errors.name = "The 'Name' is required"
+    }else if(!regexName.test(form.name.trim())) {
+        errors.name ="The 'Name' input only accept  letters and blank spaces"
+    }
+
+    if(!form.email.trim()){
+        errors.email = "The 'Email' is required"
+    }else if(!regexEmail.test(form.email.trim())) {
+        errors.email ="The 'Email' input is incorrect"
+    }
+    
+    if(!form.subject.trim()){
+        errors.subject = "The 'Subject' is required"
+    }
+
+    if(!form.message.trim()){
+        errors.message = "The 'Message' is required"
+    }else if(!regexMessage.test(form.message.trim())) {
+        errors.message ="The 'Message' input not be exceed the 255 characters lenght."
+    }
+
+    return errors;
+}
+
+let styles = {
+    fontWeight: "bold",
+    color: "#dc3545",
+};
 
 const Form = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [textarea, setTextarea] = useState("");
+    const {
+        form,
+        errors,
+        loading,
+        response,
+        handleChange,
+        handleBlur,
+        handleSubmit
+        } = useForm(initialForm,validationForm);
 
-    const handleSubmit = e =>{
-        e.preventDefault();
-        alert('El formulario se ha enviado correctamente');
-    }
   return (
     <div className='form-container'>
         <form onSubmit={handleSubmit}>
@@ -17,28 +66,49 @@ const Form = () => {
             id="name"
             name="name"
             placeholder='Type your name'
-            value={name} onChange={(e) => setName
-            (e.target.value)}
-            required/>
+            onBlur={handleBlur}
+            onChange={handleChange}
+            value={form.name}
+            required
+            />
+            {errors.name && <p style={styles}>{errors.name}</p>}
             <label htmlFor='email'>Email</label>
             <input type="email"
             id="email"
             name="email"
             placeholder='Type your email'
-            value={email} onChange={(e) => setEmail
-                (e.target.value)}
-                required/>
-            <label htmlFor='textarea'>Message</label>
-            <textarea className='message'
-            id="message"
-            name="message"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            value={form.email}
+            required
+            />
+            {errors.email && <p style={styles}>{errors.email}</p>}
+            <label htmlFor='subject'>Subject</label>
+            <input type="text"
+            id="subject"
+            name="subject"
+            placeholder='Type your subject'
+            onBlur={handleBlur}
+            onChange={handleChange}
+            value={form.subject}
+            required
+            />
+            {errors.subject && <p style={styles}>{errors.subject}</p>}
+            <label htmlFor='message'>Message</label>
+            <textarea name='message' 
+            cols="50" rows="5"
             placeholder='Type your message'
-            value={textarea} onChange={(e) => setTextarea
-                (e.target.value)}
-                required></textarea>
+            onBlur={handleBlur}
+            onChange={handleChange}
+            value={form.message}
+            required
+            ></textarea>
+            {errors.message && <p style={styles}>{errors.message}</p>}
             <input type="Submit"
             value="Submit"/>
         </form>
+        {loading && <Loader/>}
+        {response && <Message msg="Your data was sent" bgColor="#198754"/>}
     </div>
   )
 }
