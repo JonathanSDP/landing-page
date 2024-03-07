@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useForm} from "../Hooks/useForm.js"
 import Loader from './Loader.js';
-import Message from './Message.js';
+import "./Form.css";
 
 
 const initialForm = {
@@ -18,33 +18,35 @@ const validationForm = (form) => {
     let regexMessage = /^.{1,255}$/;
 
     if(!form.name.trim()){
-        errors.name = "The 'Name' is required"
+        errors.name = "The 'Name' is required!"
     }else if(!regexName.test(form.name.trim())) {
-        errors.name ="The 'Name' input only accept  letters and blank spaces"
+        errors.name ="The 'Name' input only accept letters and blank spaces!"
     }
 
     if(!form.email.trim()){
-        errors.email = "The 'Email' is required"
+        errors.email = "The 'Email' is required!"
     }else if(!regexEmail.test(form.email.trim())) {
-        errors.email ="The 'Email' input is incorrect"
+        errors.email ="The 'Email' input is incorrect!"
     }
     
     if(!form.subject.trim()){
-        errors.subject = "The 'Subject' is required"
+        errors.subject = "The 'Subject' is required!"
     }
 
     if(!form.message.trim()){
-        errors.message = "The 'Message' is required"
+        errors.message = "The 'Message' is required!"
     }else if(!regexMessage.test(form.message.trim())) {
-        errors.message ="The 'Message' input not be exceed the 255 characters lenght."
+        errors.message ="The 'Message' input not be exceed the 255 characters lenght!"
     }
 
     return errors;
 }
 
 let styles = {
+    fontSize: "13px",
     fontWeight: "bold",
     color: "#dc3545",
+    
 };
 
 const Form = () => {
@@ -61,6 +63,8 @@ const Form = () => {
   return (
     <div className='form-container'>
         <form onSubmit={handleSubmit}>
+            <fieldset className='field-form'>
+            <div className='div-name'>
             <label htmlFor='name'>Name</label>
             <input type="text"
             id="name"
@@ -72,6 +76,8 @@ const Form = () => {
             required
             />
             {errors.name && <p style={styles}>{errors.name}</p>}
+            </div>
+            <div className='div-email'>
             <label htmlFor='email'>Email</label>
             <input type="email"
             id="email"
@@ -83,6 +89,8 @@ const Form = () => {
             required
             />
             {errors.email && <p style={styles}>{errors.email}</p>}
+            </div>
+            <div className='div-subject'>
             <label htmlFor='subject'>Subject</label>
             <input type="text"
             id="subject"
@@ -94,21 +102,29 @@ const Form = () => {
             required
             />
             {errors.subject && <p style={styles}>{errors.subject}</p>}
-            <label htmlFor='message'>Message</label>
+            </div>
+            <div className='div-textarea'>
+            <label htmlFor='message' className='message'>Message</label>
             <textarea name='message' 
-            cols="50" rows="5"
-            placeholder='Type your message'
+            cols="30" rows="5"
+            placeholder='Type your message...'
             onBlur={handleBlur}
             onChange={handleChange}
             value={form.message}
             required
             ></textarea>
             {errors.message && <p style={styles}>{errors.message}</p>}
+            </div>
+            <div className='div-submit'>
             <input type="Submit"
             value="Submit"/>
+            </div>
+            {loading && <Loader/>}
+            <div className='message-resp-div'>
+                {response && <p className='message-resp'>Your data was sent</p>}
+            </div>
+            </fieldset>
         </form>
-        {loading && <Loader/>}
-        {response && <Message msg="Your data was sent" bgColor="#198754"/>}
     </div>
   )
 }
