@@ -9,10 +9,10 @@ const Profile = () => {
                 Jonathan Pojomovsky,<br/>
                 Developer Fullstack.
             </h1>
-            <p className='profile-desc'>Soy un desarrollador trainee
-             y Tengo experiencia en HTML,CSS,JAVASCRIPT,<br/>
-            REACT,PHP,SQL,PLSQL,<br/>
-            DATASTAGE,C++ y UNREALENGINE</p>
+            <p className='profile-desc'>Soy un apasionado por la tecnologia y 
+            orientado a resultados , de momento cuento como experiencia como Freelancer
+            y busco mi primera oportunidad para ingresar a desarrollar a una empresa y seguir
+            creciendo laboralmente.</p>
             <img src={require("../Assets/main-photo.png")}></img>
         </section>
         <section className='skills-container'>
@@ -20,8 +20,9 @@ const Profile = () => {
                  Mis habilidades
             </h2>
             <p className='skills-desc'>
-                Tengo conocimientos en SQL server, en automatizacion,<br/>
-                HTML, CSS, JAVASCRIPT, DataStage, y conocimiento basico en react
+                Tengo conocimientos en HTML,CSS,JAVASCRIPT,<br/>
+                REACT,PHP,SQL,PLSQL,<br/>
+                DATASTAGE,C++ y UNREALENGINE
             </p>
             <div className='wrap-skills'>
                 <div className='skill'>

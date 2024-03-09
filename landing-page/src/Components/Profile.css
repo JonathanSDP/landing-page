@@ -17,6 +17,7 @@
     width: 200px;
     height: 200px;
     border-radius: 32px;
+    object-fit: cover;
 }
 .profile-title {
     margin-top: 30px;
