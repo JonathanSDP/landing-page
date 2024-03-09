@@ -23,9 +23,10 @@ const Experience = () => {
                 HTML, CSS y JAVASCRIPT, con REACT</p>
             </div>
             <div className='job'>
-                <img className='job-img' src={require("../Assets/proximamente.png")}></img>
-                <h3 className='job-title'>aca va el titulo</h3>
-                <p className='job-desc'>aca va la descripcion del proyecto</p>
+                <img className='job-img' src={require("../Assets/Crud.jpg")}></img>
+                <h3 className='job-title'><a href="https://github.com/JonathanSDP/CRUD-PHP">Crud PHP-PDO</a></h3>
+                <p className='job-desc'>Desarrollo de un CRUD realizado con php y PDO
+                con MVC</p>
             </div>
             <div className='job'>
                 <img className='job-img' src={require("../Assets/proximamente.png")}></img>
