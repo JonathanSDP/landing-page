@@ -13,7 +13,7 @@ const Profile = () => {
              y Tengo experiencia en HTML,CSS,JAVASCRIPT,<br/>
             REACT,PHP,SQL,PLSQL,<br/>
             DATASTAGE,C++ y UNREALENGINE</p>
-            <img src={require("../Assets/main-photo.jpg")}></img>
+            <img src={require("../Assets/main-photo.png")}></img>
         </section>
         <section className='skills-container'>
             <h2 className='skills-subtitle'>

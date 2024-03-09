@@ -7,16 +7,20 @@ const Experience = () => {
             Mi experiencia
         </h2>
         <p className='experience-desc'>
-            aca va la descripcion
+            Como comente poseo experiencia Freelancer en diseño y desarrollo web 
+            Frontend y Backend y mas abajo voy a ir subiendo los proyectos
+            en los que estoy trabajando. Gracias!
         </p>
         <div className='gitdiv'>
         <a href="https://github.com/JonathanSDP" className='github'>Github</a>
         </div>
         <div className='job-container'>
             <div className='job'>
-                <img className='job-img' src={require("../Assets/proximamente.png")}></img>
-                <h3 className='job-title'>aca va el titulo</h3>
-                <p className='job-desc'>aca va la descripcion del proyecto</p>
+                <img className='job-img' src={require("../Assets/landing.jpg")}></img>
+                <h3 className='job-title'><a href="#">Landing Page</a></h3>
+                <p className='job-desc'>Desarrollo de una Landing Page
+                tomando como ejemplo el desafio de holajuniors.com desarrollada en 
+                HTML, CSS y JAVASCRIPT, con REACT</p>
             </div>
             <div className='job'>
                 <img className='job-img' src={require("../Assets/proximamente.png")}></img>
