@@ -35,18 +35,18 @@ const Experience = () => {
             </div>
             <div className='job'>
                 <img className='job-img' src={require("../Assets/proximamente.png")}></img>
-                <h3 className='job-title'>aca va el titulo</h3>
-                <p className='job-desc'>aca va la descripcion del proyecto</p>
+                <h3 className='job-title'>Proximamente!</h3>
+                <p className='job-desc'>Proximamente añadire un nuevo proyecto, estate atento/a!!</p>
             </div>
             <div className='job'>
                 <img className='job-img' src={require("../Assets/proximamente.png")}></img>
-                <h3 className='job-title'>aca va el titulo</h3>
-                <p className='job-desc'>aca va la descripcion del proyecto</p>
+                <h3 className='job-title'>Proximamente!</h3>
+                <p className='job-desc'>Proximamente añadire un nuevo proyecto, estate atento/a!!</p>
             </div>
             <div className='job'>
                 <img className='job-img' src={require("../Assets/proximamente.png")}></img>
-                <h3 className='job-title'>aca va el titulo</h3>
-                <p className='job-desc'>aca va la descripcion del proyecto</p>
+                <h3 className='job-title'>Proximamente!</h3>
+                <p className='job-desc'>Proximamente añadire un nuevo proyecto, estate atento/a!!</p>
             </div>
         </div>
     </div>
