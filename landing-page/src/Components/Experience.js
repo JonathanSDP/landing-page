@@ -29,9 +29,9 @@ const Experience = () => {
                 con MVC</p>
             </div>
             <div className='job'>
-                <img className='job-img' src={require("../Assets/proximamente.png")}></img>
-                <h3 className='job-title'>aca va el titulo</h3>
-                <p className='job-desc'>aca va la descripcion del proyecto</p>
+                <img className='job-img' src={require("../Assets/UniverseBlog.jpg")}></img>
+                <h3 className='job-title'><a href="https://bloguniverse.netlify.app/">Blog tematico del Universo</a></h3>
+                <p className='job-desc'>Desarrollo de un Blog realizado con HTML,  con animaciones CSS En REACT</p>
             </div>
             <div className='job'>
                 <img className='job-img' src={require("../Assets/proximamente.png")}></img>
