@@ -9,8 +9,8 @@ const Profile = () => {
                 Jonathan Pojomovsky,<br/>
                 Developer Fullstack.
             </h1>
-            <p className='profile-desc'>Soy un apasionado por la tecnologia y 
-            orientado a resultados , de momento cuento como experiencia como Freelancer
+            <p className='profile-desc'>Soy un apasionado por la tecnologia 
+            orientado a resultados , de momento cuento con experiencia como Freelancer
             y busco mi primera oportunidad para ingresar a desarrollar a una empresa y seguir
             creciendo laboralmente.</p>
             <img src={require("../Assets/main-photo.png")}></img>
